@@ -40,9 +40,12 @@ del data['reporting-org']
 # lists of sector codes and sector vocab codes.
 # Convert these to lists.
 for i in data.index:
+    #print('Line: ' + str(i))
     data.at[i, 'sector-code'] = data.at[i, 'sector-code'].split(';')
     data.at[i, 'sector-vocabulary-code'] = data.at[i, 'sector-vocabulary-code'].split(';')
-    
+    #result = list(zip(data.at[i,'sector-vocabulary-code'], data.at[i, 'sector-code']))
+    #print(list(result))
+    #data.at[i, 'sectors-zipped'] = [x[0] + '-' + x[1] for x in result]
 #TODO - this line is intended to create a new column that concatenates the 
 #sector code and sector vocab code in the loop. Not working - fix later
     #data.at[i, 'zipped'] = [x + '-' + y for x,y in zip(data.at[i, 'sector-code'],data.at[i, 'sector-vocabulary-code'])]
