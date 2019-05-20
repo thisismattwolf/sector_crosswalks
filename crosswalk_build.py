@@ -6,5 +6,9 @@ Created on Wed Apr  3 21:23:16 2019
 """
 
 import pandas as pd
+from data_prep import data_prepare
 
-#data = pd.read_csv()
+# get the World Bank sector and sector codes data
+data = data_prepare()
+
+
