@@ -11,4 +11,6 @@ from data_prep import data_prepare
 # get the World Bank sector and sector codes data
 data = data_prepare()
 
+sector_list = []
+
 
