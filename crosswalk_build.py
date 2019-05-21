@@ -11,6 +11,9 @@ from data_prep import data_prepare
 # get the World Bank sector and sector codes data
 data = data_prepare()
 
-sector_list = []
+from functions import support, confidence, lift, create_sector_list
 
+sector_list = create_sector_list(data)
+
+lifts = [[sector[0],sector[1],support(sector, data)] for sector in sector_list]
 
