@@ -17,3 +17,17 @@ sector_list = create_sector_list(data)
 
 lifts = [[sector[0],sector[1],support(sector, data)] for sector in sector_list]
 
+#TO-DO 1. Need to calculate frequency of individual sector codes
+
+frequencies = {}
+
+for row in data:
+    for sector in row:
+        if sector[1] not in frequencies.keys():
+            frequencies[sector[1]] = 1
+        else:
+            frequencies[sector[1]] += 1
+
+        
+
+#TO-DO 2. Then calculate lift of  
